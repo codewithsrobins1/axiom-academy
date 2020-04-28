@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%; /* Want 62.5% of the default root font (16px) to have rems in increments of 10px; 1 rem = 16px */
+    
+    //use include for queries because 
+    //don't want to change every line of code in the @media query. Can just change breakpoint with mixin
+    @include respond(tab-land){
+        font-size: 56%; //1 rem = 9px (9/16 = .56)
+    }
+
+    @include respond(tab-port){
+        font-size: 50%; //1 rem = 8px (8/16 = .50)
+    }
+
+    @include respond(big-desktop){
+        font-size: 75%; //1 rem = 12px (12/16 = .75)
+    }
+}
+
+body {
+    box-sizing: border-box; /* border and padding no longer added to total width and total height */
+    padding: 3rem; 
+
+    @include respond(tab-port){
+        padding: 0;
+    }
+}
+
+//Change color when user selects text
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}   

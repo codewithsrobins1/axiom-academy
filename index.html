@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/icon-font.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/jpg" href="img/miniLogo.jpg">
+        <script src="https://kit.fontawesome.com/ddadad7e59.js" crossorigin="anonymous"></script>
+        <title>Axiom Academy | Elite Chefs</title>
+    </head>
+
+    <body>
+
+        <!-- Navigation Menu -->
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+            <div class="navigation__background">
+                &nbsp;
+            </div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#about" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#benefits" class="navigation__link">Benefits</a></li>
+                    <li class="navigation__item"><a href="#curriculum" class="navigation__link">Curriculum</a></li>
+                    <li class="navigation__item"><a href="#testimonials" class="navigation__link">Testimonials</a></li>
+                    <li class="navigation__item"><a href="#signup" class="navigation__link">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Landing Page -->
+        <header class='header' id="landing">
+            <div class='header__logo-box'>
+                <img src="img/logo-white.svg" alt="Logo" class='header__logo'>
+            </div>
+            
+            <div class='header__text-box'>
+                <h1 class='heading-primary'> 
+                    <span class='heading-primary--main'>Axiom Academy</span>
+                    <span class='heading-primary--sub'>Unlock your full potential</span>
+                </h1>
+
+                <a href="#curriculum" class="btn btn--white btn--animated">
+                    See Curriculum
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <!-- ABOUT SECTION -->
+            <section class="section-about" id="about">
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">
+                        Accerlerate Your Cooking Career
+                    </h2>
+                </div>
+
+                <div class='row'>
+                    <div class='col-1-of-2'>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Become the elite chef you were meant to be</h3>
+                        <div class="paragraph">
+                            Looking embark on your culinary career or expand your skills? Look no further. Our program has been designed to get your foot in the door to the restaurant buisness.
+                        </div>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Hone your skills and the fundamentals</h3>
+                        <div class="paragraph">
+                            Our rigorious training focuses on the culinary fundamentals and allows repeated practice. Skilled indivduals can also expand their knowledge from our executive chefs.
+                        </div>
+
+                        <a href="#benefits" class="btn-text">Learn More &rarr;</a>
+                    </div>
+
+                    <div class='col-1-of-2'>
+                        <div class="composition">
+
+                            <!-- Resolution Switching -->
+                            <img srcset="img/prep-1.jpg 300w, img/prep-1-large.jpg 1000w"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                 alt="Photo 1"
+                                 class="composition__photo composition__photo--p1"
+                                 src="img/prep-1-large.jpg">
+                                <!-- srcset allows possible image sources 
+                                sizes to inform browser about approximate width of image at diff viewport width
+                                20vw is from img width/900px
+                                30vw is from img width/300px 
+                                src can be used as last resort if there's no browser support
+                                -->
+
+                            <img srcset="img/prep-2.jpg 300w, img/prep-2-large.jpg 1000w"
+                                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                alt="Photo 2"
+                                class="composition__photo composition__photo--p2"
+                                src="img/prep-2-large.jpg">
+                            
+                            <img srcset="img/prep-3.jpg 300w, img/prep-3-large.jpg 1000w"
+                                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                                alt="Photo 3"
+                                class="composition__photo composition__photo--p3"
+                                src="img/prep-3-large.jpg">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BENEFITS SECTION -->
+            <section class="section-features" id="benefits">
+                <div class="row">
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-bolt"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Fundamentals</h3>
+                            <p class="feature-box__text">
+                                Learn the basic knife skills and preparing of ingredients.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-target"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Main Courses</h3>
+                            <p class="feature-box__text">
+                                Create main courses from different types of cuisine.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-book"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Exquisite Desserts</h3>
+                            <p class="feature-box__text">
+                                Explore the world of desserts to end a course.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-cup"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Drink Pairings</h3>
+                            <p class="feature-box__text">
+                                Discover which beverages pair well with a course.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CURRICULUM SECTION -->
+            <section class="section-tours" id="curriculum">
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">
+                        Academy Curriculum
+                    </h2>
+                </div>
+
+                <div class='row'>
+                    <div class='col-1-of-3'>
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--1">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--1">Entry Level Chef</span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>4 days / week</li>
+                                        <li>Up to 25 trainees</li>
+                                        <li>3 Instructor Chefs</li>
+                                        <li>Chefs with 0 years experience</li>
+                                        <li>24 weeks</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-1">
+                                <div class="card__cta">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">Tuition</p>                               
+                                        <p class="card__price-value">$5,000</p>
+                                    </div>
+                                        <a href="#popup" class="btn btn--white">Sign Up!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='col-1-of-3'>
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--2">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--2">Experienced Chef</span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>3 days / week</li>
+                                        <li>Up to 15 trainees</li>
+                                        <li>2 Instructor Chefs</li>
+                                        <li>Chefs with 2+ years experience</li>
+                                        <li>16 weeks</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-2">
+                                <div class="card__cta">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">Tuition</p>                               
+                                        <p class="card__price-value">$4,000</p>
+                                    </div>
+                                        <a href="#popup" class="btn btn--white">Sign Up!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='col-1-of-3'>
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--3">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--3">Fine Dining Chef</span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>2 days / week</li>
+                                        <li>Up to 5 trainees</li>
+                                        <li>1 Instructor Chef</li>
+                                        <li>Chefs with 7+ years experience</li>
+                                        <li>12 weeks</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-3">
+                                <div class="card__cta">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">Tuition</p>                               
+                                        <p class="card__price-value">$3,000</p>
+                                    </div>
+                                        <a href="#popup" class="btn btn--white">Sign Up!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="u-center-text u-margin-top-huge">
+                    <a href="#" class="btn btn--green">See More Info</a>
+                </div>
+            </section>
+
+            <!-- STORIES SECTION -->
+            <section class="section-story" id="testimonials">
+                <div class="bg-video">
+                    <!-- Dont Specify video in video tag; Use Source -->
+                    <video class="bg-video__content" autoplay muted loop>
+                        <source src="img/video1.mp4" type="video/mp4">
+                        <source src="img/video1.webm" type="video/webm">
+                            Your browser is not supported :(
+                    </video>
+                </div>
+
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">
+                        Hear from our former students
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="story">
+                        <figure class="story__shape">
+                            <img src="img/prep-8.jpg" alt="person cooking" class="story__img">
+                            <figcaption class="story__caption">
+                                Tim Jackson
+                            </figcaption>
+                        </figure>
+                        <div class="story__text">
+                            <h3 class="heading-tertiary u-margin-bottom-small"> 
+                                My dream of becoming a chef came true
+                            </h3>
+                            <p>The chefs and instructors at Axiom really took my skills to the next level.
+                                I was a cook at Wingstop and knew I was destined for more. I enrolled in their entry-level
+                                course and that helped propel my culinary career.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="story">
+                        <figure class="story__shape">
+                            <img src="img/prep-9.jpg" alt="person cooking" class="story__img">
+                            <figcaption class="story__caption">
+                                David Chu
+                            </figcaption>
+                        </figure>
+                        <div class="story__text">
+                            <h3 class="heading-tertiary u-margin-bottom-small"> 
+                                The best instructors and guidance I needed
+                            </h3>
+                            <p>As a chef with 7 years experience, I enrolled in their Fine Dining course to advance my career.
+                                Not only did the instructors show new techniques, I learned more about the resutant business.
+                                With the knowledge I've gained, I'm looking to become a head chef at my current restaurant.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="u-center-text u-margin-top-huge">
+                    <a href="#" class="btn-text">Read More &rarr;</a>
+                </div>
+            </section>
+
+            <!-- ENROLL SECTION -->
+            <section class="section-enroll" id="signup">
+                <div class="row">
+                    <div class="enroll">
+                        <div class="enroll__form">
+                            <div class="u-margin-bottom-medium">
+                                <h2 class="heading-secondary">
+                                    Start Your Journey
+                                </h2>
+                            </div>
+
+                            <form action="#" class="form">
+                                <div class="form__group">
+                                    <input type="text" id="name" class="form__input" placeholder="Full Name" required>
+                                    <label for="name" class="form__label">Full Name</label>
+                                </div> 
+
+                                <div class="form__group">
+                                    <input type="email" id="email" class="form__input" placeholder="Email" required>
+                                    <label for="email" class="form__label">Email</label>
+                                </div>
+
+                                <div class="form__group ">
+                                    <div class="form__radio-group u-margin-bottom-medium">
+                                        <input type="radio" id="small" class="form__radio-input" name="size">
+                                        <label for="small" class="form__radio-label">
+                                            <span class="form__radio-button"></span>
+                                            0-2 years experience
+                                        </label>
+                                    </div>
+
+                                    <div class="form__radio-group u-margin-bottom-medium">
+                                        <input type="radio" id="large" class="form__radio-input" name="size">
+                                        <label for="large" class="form__radio-label">
+                                            <span class="form__radio-button"></span>
+                                            2+ years experience
+                                        </label>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <button class="btn btn--green">Next Step &rarr;</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__logo-box">
+
+                <!-- Art Direction - Telling browser to use one image on 1 screen width, and another for different screen -->
+                <picture class="footer__logo"> <!-- Picture element allows multiple sources for an image -->
+                    <!-- Media attribute can use css media query (at 600px use the small photo) -->
+                    <source srcset="img/logo-white-small-1x.jpg 1x, img/logo-white-small-2x.png 2x" 
+                        media="(max-width: 37.5em)">
+                    <!-- If larger than 600px, Allow browser to choose best image according to screen that is used  -->
+                    <img srcset="img/logo-white-1x.jpg 1x, img/logo-white-2x.jpg 2x" alt="Full Logo" src="img/logo-green-2x.png">
+                </picture>
+
+                
+                
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#about" class="footer__link">About</a></li>
+                            <li class="footer__item"><a href="#benefits" class="footer__link">Benefits</a></li>
+                            <li class="footer__item"><a href="#curriculum" class="footer__link">Curriculum</a></li>
+                            <li class="footer__item"><a href="#testimonials" class="footer__link">Testimonials</a></li>
+                            <li class="footer__item"><a href="#signup" class="footer__link">Sign Up</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni totam tenetur, vero ut distinctio recusandae.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni totam tenetur, vero ut distinctio recusandae.
+                        <a href="#" class="footer__link">See More</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Sign Up Modal Popup -->
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="img/prep-8.jpg" alt="tour photo" class="popup__img">
+                    <img src="img/prep-9.jpg" alt="tour photo" class="popup__img">
+                </div>
+                <div class="popup__right">
+                    <a href="#curriculum" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Start enrolling Now</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please see these terms before enrolling</h3>
+                    <p class="popup__text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat tempore dolores hic 
+                        odio repellendus accusamus minus officia sit impedit.
+                        odio repellendus accusamus minus officia sit impedit.
+                        odio repellendus accusamus minus officia sit impedit.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat tempore dolores hic 
+                        odio repellendus accusamus minus officia sit impedit.
+
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat tempore dolores hic 
+                        odio repellendus accusamus minus officia sit impedit.
+                        odio repellendus accusamus minus officia sit impedit.
+                        odio repellendus accusamus minus officia sit impedit.
+                    </p>
+                    <a href="index.html" class="btn btn--green">enroll Now</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </body>
+</html>

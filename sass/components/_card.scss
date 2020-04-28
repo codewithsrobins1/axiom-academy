@@ -1,0 +1,225 @@
+.card {
+    perspective: 150rem; //If value was lower, there would be a more dramatic effect
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 52rem; //position absolute causes loss in height due to removing from doc flow; need to set parent's height to same height
+
+    &__side {
+        //Functionality of Card
+        color: black;
+        font-size: 2rem;
+        height: 52rem;
+        transition: all .8s ease;
+        position: absolute; //Need absolute position for front and back to stack
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: $box-shadow-main;
+
+        //Hide the Backpart of an Element
+        backface-visibility: hidden;
+
+
+        &--front {
+            background-color: $color-white;
+        }
+
+        //Backside is already flipped due to transform - Will flip around by rotating to 0
+        &--back {
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark)
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark)
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark)
+            }
+        }
+    }
+
+    //When hovering card, we want the side to transform
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+
+    //Style for the Front
+    &__picture {
+        background-size: cover;
+        height: 20rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        
+
+        &--1{
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+             url(../img/prep-5.jpg)
+        }
+
+        &--2{
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+             url(../img/prep-6.jpg)
+        }
+
+        &--3{
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
+             url(../img/prep-7.jpg)
+        }
+    }
+
+    &__heading {
+       font-size: 2.8rem;
+       font-weight: 300;
+       text-transform: uppercase; 
+       color: #fff;
+       position: absolute;
+       top: 12rem;
+       width: 75%;
+       right: 2rem;
+       text-align: right;
+  
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone; //If disabled, text will be on different indentations (apply settings to all boxes created by the span element)
+        
+        &--1 {
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba($color-secondary-light, .85), 
+                rgba($color-secondary-dark, .85)
+            )
+        }
+
+        &--2 {
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba($color-primary-light, .85), 
+                rgba($color-primary-dark, .85)
+            )
+        }
+
+        &--3 {
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba($color-tertiary-light, .85), 
+                rgba($color-tertiary-dark, .85)
+            )
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+
+        ul {
+            list-style:none;
+            width: 80%;
+            margin: 0 auto;
+
+                li{
+                    text-align: center;
+                    font-size: 1.5rem;
+                    padding: 1rem;
+                    
+                    &:not(last-child){
+                        border-bottom: 1px solid $color-grey-light-2;
+                    }
+                }
+        }
+    }
+
+    //BACK SIDE STYLING
+    &__cta {
+        position: absolute;
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        
+    }
+
+     &__price-box{
+        text-align: center;
+        margin-bottom: 8rem;
+        color: $color-white;
+    }
+
+    &__price-only{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value{
+        font-size: 6rem;
+        font-weight: 100;
+    }
+
+
+    //Media Query
+    @media only screen and (max-width: 56.25em), 
+        only screen and (hover: none) {    //900px
+            height: auto; 
+            border-radius: 3px;
+            background-color: $color-white;
+            box-shadow: $box-shadow-main;
+    
+            &__side {
+                height: auto;
+                position: relative; // no longer have two sides
+                box-shadow: none;
+                
+    
+                //Backside is already flipped due to transform - Will flip around by rotating to 0
+                &--back {
+                    transform: rotateY(0);
+                    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+                    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+                }
+            }
+    
+            &:hover &__side--front {
+                transform: rotateY(0);
+            }
+    
+    
+            &__details{
+                padding: 1rem 3rem;
+            }
+    
+            //BACK SIDE STYLING
+            &__cta {
+                position: relative;
+                width: 100%;
+                top: 0;
+                left: 0;
+                transform: translate(0);
+                padding: 7rem 4rem;
+            }
+    
+            &__price-box{
+                margin-bottom: 3rem;
+            }
+    
+            &__price-value{
+                font-size: 5rem;
+            }
+        }
+    }  
+        
