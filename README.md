@@ -20,5 +20,21 @@ https://axiom-academy.netlify.app/
 * HTML
 * Sass
 
+## Getting Started
+
+To get a local copy up and running follow these steps using your terminal.
+
+### Installation
+
+1. Clone the repo
+```sh
+git clone https://github.com/codewithsrobins1/axiom-academy.git
+```
+2. Install NPM packages
+```sh
+npm install i
+
+```
+
 ### Credit
 * Design from Jonas Schmedtmann
